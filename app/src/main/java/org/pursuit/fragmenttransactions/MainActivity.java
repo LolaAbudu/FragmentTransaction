@@ -14,34 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
         MainFragment mainFragment = new MainFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction mainTransaction = fragmentManager.beginTransaction().addToBackStack("main");
-        mainTransaction.replace(R.id.main_container, mainFragment);
+        FragmentTransaction mainTransaction = fragmentManager.beginTransaction();
+        mainTransaction.replace(R.id.main_container, mainFragment).addToBackStack("mainFragment");
         mainTransaction.commit();
-
-        FirstFragment firstFragment = new FirstFragment();
-        FragmentTransaction firstTransaction = fragmentManager.beginTransaction().addToBackStack("first");
-        firstTransaction.replace(R.id.main_container, firstFragment);
-        firstTransaction.commit();
-
-        SecondFragment secondFragment = new SecondFragment();
-        FragmentTransaction secondTransaction = fragmentManager.beginTransaction().addToBackStack("second");
-        secondTransaction.replace(R.id.main_container, secondFragment);
-        secondTransaction.commit();
-
-        ThirdFragment thirdFragment = new ThirdFragment();
-        FragmentTransaction thirdTransaction = fragmentManager.beginTransaction().addToBackStack("third");
-        thirdTransaction.replace(R.id.main_container, thirdFragment);
-        thirdTransaction.commit();
-
-        FourthFragment fourthFragment = new FourthFragment();
-        FragmentTransaction fourthTransaction = fragmentManager.beginTransaction().addToBackStack("fourth");
-        fourthTransaction.replace(R.id.main_container, fourthFragment);
-        fourthTransaction.commit();
-
-        FifthFragment fifthFragment = new FifthFragment();
-        FragmentTransaction fifthTransaction = fragmentManager.beginTransaction().addToBackStack("fifth");
-        fifthTransaction.replace(R.id.main_container, fifthFragment);
-        fifthTransaction.commit();
-
     }
 }
